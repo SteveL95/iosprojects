@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="benjamin-voros-575800-unsplash" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-1k-pHR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZm-gr-hEn" userLabel="Start">
+                                <rect key="frame" x="30" y="712" width="120" height="70"/>
+                                <color key="backgroundColor" red="0.085473018389661384" green="0.88724498056994816" blue="0.26597730003434827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="UBQ-oT-IWo"/>
+                                    <constraint firstAttribute="width" constant="120" id="vo1-AW-Qso"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Start ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kv7-9A-Qyr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FL-Wf-UHl">
+                                <rect key="frame" x="264" y="712" width="120" height="70"/>
+                                <color key="backgroundColor" red="0.97686609455958551" green="0.20412749491623952" blue="0.0018016871255735725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="GZC-L5-szQ"/>
+                                    <constraint firstAttribute="width" constant="120" id="avH-fx-buJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="stopButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wsx-hY-fA1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHA-MB-jom">
+                                <rect key="frame" x="0.0" y="178" width="414" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="6s9-CO-BRB"/>
+                                    <constraint firstAttribute="width" constant="414" id="yu7-Rv-Qjq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UHA-MB-jom" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5ru-UA-gS5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8FL-Wf-UHl" secondAttribute="bottom" constant="80" id="BjO-RY-Kbe"/>
+                            <constraint firstItem="EZm-gr-hEn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ITI-tS-nX0"/>
+                            <constraint firstItem="UHA-MB-jom" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PyD-e6-7XX"/>
+                            <constraint firstItem="nhK-1k-pHR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QOM-ik-e6H"/>
+                            <constraint firstItem="nhK-1k-pHR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WWk-iy-wzm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EZm-gr-hEn" secondAttribute="bottom" constant="80" id="YeP-Rc-qhX"/>
+                            <constraint firstItem="UHA-MB-jom" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="134" id="fXo-hd-0Xy"/>
+                            <constraint firstItem="nhK-1k-pHR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hVa-fn-RCv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8FL-Wf-UHl" secondAttribute="trailing" constant="30" id="int-ua-R8l"/>
+                            <constraint firstItem="nhK-1k-pHR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jIJ-rI-a4S"/>
+                            <constraint firstItem="nhK-1k-pHR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pjb-67-0WD"/>
+                            <constraint firstItem="nhK-1k-pHR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r54-RB-CVy"/>
+                            <constraint firstAttribute="bottom" secondItem="nhK-1k-pHR" secondAttribute="bottom" id="vFm-eN-F54"/>
+                            <constraint firstItem="nhK-1k-pHR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vkL-hy-jwm"/>
+                            <constraint firstItem="nhK-1k-pHR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xAx-EN-R9F"/>
+                            <constraint firstItem="nhK-1k-pHR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yk0-po-NIG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="elapsedTimeLabel" destination="UHA-MB-jom" id="mRE-st-0Mr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133.33333333333334" y="54.910714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="benjamin-voros-575800-unsplash" width="4096" height="2733"/>
+    </resources>
+</document>
